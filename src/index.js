@@ -7,6 +7,7 @@ import Resume from './pages/Resume';
 import CourseNotes from './pages/Notes';
 import Portfolio from './pages/Portfolio';
 import Credits from './pages/Credits';
+import IdeaBox from './pages/IdeaBox';
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
