@@ -17,5 +17,4 @@ add as many as I can every year.
 * decipher morse code (input morse - output english) and vice versa (input english - output morse)
 * deciphering sign language (from sign language to english and vice versa) prbbaly have to do a lot with neural networks and machine learning
 * chrome plugin/extention that helps me keep on task
-
 */
