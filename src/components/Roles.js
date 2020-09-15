@@ -1,12 +1,21 @@
 // https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks
+// https://blog.prototypr.io/using-reactcsstransitiongroup-for-enter-exit-animations-ea100d68e72f
 
 import React from 'react';
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const roles = ["a developer", "a designer", "a creator", "an entrepreneur"];
 
 const style = {
+    display: "flex",
+    // flexDirection: "column",
     fontSize: "150%",
+}
 
+const role_style = {
+    paddingLeft: "5px",
+    paddingRight: "2px",
+    color: "#ff3d7f",
 }
 
 export default class Roles extends React.Component {
@@ -31,7 +40,12 @@ export default class Roles extends React.Component {
 
     render() {
         return (
-        <div style={style}> I am {roles[this.state.count]}! </div>
+            <div style={style}>
+                I am
+                <div style={role_style}>
+                    {roles[this.state.count]}
+                </div>!
+            </div>
         );
     }
 }

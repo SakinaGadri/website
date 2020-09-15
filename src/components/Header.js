@@ -9,7 +9,7 @@ import notes from '../images/notes.png';
 import portfolio from '../images/portfolio.png';
 
 const Styles = styled.div`
-  .navbar { background-color: #f9d8ce; display: flex; align-items: baseline }
+  .navbar { background-color: #f9d8ce; display: flex; align-items: baseline; padding: 0px}
   a, .navbar-nav, .navbar-light .nav-link {
     color: #447e86;
     &:hover { color: #052226; }

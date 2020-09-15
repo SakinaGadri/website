@@ -21,4 +21,5 @@ Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from
 Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 https://stackoverflow.com/questions/41139643/react-native-how-to-change-text-value-dynamically
+https://reactjs.org/docs/animation.html
 */
