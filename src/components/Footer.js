@@ -19,17 +19,22 @@ const text = {
 
 export default class Footer extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = { currentYear: new Date().getFullYear() };
+    }
+    
     render() {
         return (
             <footer style={footer}>
                 <div style={text}>
-                    © Sakina Gadriwala, 2020
+                    © Sakina Gadriwala, {this.state.currentYear}
                     <a rel="noopener noreferrer" target="_blank" href="https://github.com/SakinaGadri">
-                        <img src="https://clipart.info/images/ccovers/1499794873github-logo-png.png" style={{ width: '65px', paddingLeft: '5px' }} alt="github url"/>
-                    </a> | 
+                        <img src="https://clipart.info/images/ccovers/1499794873github-logo-png.png" style={{ width: '65px', paddingLeft: '5px' }} alt="github url" />
+                    </a> |
                     <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/sakina-gadriwala">
-                        <img alt="linkedin url" src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo-2003%E2%80%932011.png" style={{ width: '65px', paddingLeft: '5px'}}/>
-                    </a> | 
+                        <img alt="linkedin url" src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo-2003%E2%80%932011.png" style={{ width: '65px', paddingLeft: '5px' }} />
+                    </a> |
                     Credits: <a href="/credits"> Credits</a>
                 </div>
             </footer>

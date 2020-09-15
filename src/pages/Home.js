@@ -47,7 +47,7 @@ const icon_div_style = {
 
 const icon_style = {
     marginLeft: "10px",
-    width: "55px"
+    width: "50px"
 }
 
 export default class Home extends React.Component {
@@ -96,7 +96,7 @@ export default class Home extends React.Component {
                 <p style={{ marginTop: "1rem", marginLeft: "150px", marginBottom: "0px", fontSize: "130%" }}>Find me on:</p>
                 <div style={icon_div_style}>
                     <a rel="noopener noreferrer" target="_blank" href="https://github.com/SakinaGadri">
-                        <img alt="github" src="https://cdn.iconscout.com/icon/free/png-512/github-brand-logo-47401.png" style={icon_style} />
+                        <img alt="github" src="https://www.flaticon.com/svg/static/icons/svg/733/733609.svg" style={icon_style} />
                     </a>
                     <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/sakina-gadriwala">
                         <img alt="linkedin" src="https://www.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" style={icon_style} />

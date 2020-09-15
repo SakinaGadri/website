@@ -1,15 +1,11 @@
-import logo from '../images/name300.png';
+import logo from '../images/sakina.png';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import React from 'react';
 import styled from 'styled-components';
-import resume from '../images/resume.png';
-import idea from '../images/idea.png';
-import notes from '../images/notes.png';
-import portfolio from '../images/portfolio.png';
 
 const Styles = styled.div`
-  .navbar { background-color: #f9d8ce; display: flex; align-items: baseline; padding: 0px}
+  .navbar { background-color: #f9d8ce; display: flex; align-items: baseline; padding: 10px}
   a, .navbar-nav, .navbar-light .nav-link {
     color: #447e86;
     &:hover { color: #052226; }
@@ -20,7 +16,7 @@ const Styles = styled.div`
 `;
 
 const icon = {
-    width: "30px",
+    width: "45px",
     padding: "5px"
 }
 
@@ -32,15 +28,19 @@ export default class Header extends React.Component {
                     <Navbar.Brand href="/">
                         <img
                             src={logo}
-                            width="120px"
+                            width="100px"
+                            style={{
+                                marginLeft: "5px",
+                                padding: "10px"
+                            }}
                             alt="name"
                         />
                     </Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/resume"> <img alt= "resume" src={resume} style={icon}/> Resume</Nav.Link>
-                        <Nav.Link href="/notes"> <img alt= "notes" src={notes} style={icon}/> Course Notes</Nav.Link>
-                        <Nav.Link href="/portfolio"> <img alt= "portfolio" src={portfolio} style={icon}/> Portfolio</Nav.Link>
-                        <Nav.Link href="/ideabox"> <img alt= "idea" src={idea} style={icon}/> Idea Box</Nav.Link>
+                        <Nav.Link href="/resume"> <img alt= "resume" src="https://www.flaticon.com/svg/static/icons/svg/941/941565.svg" style={icon}/> Resume</Nav.Link>
+                        <Nav.Link href="/notes"> <img alt= "notes" src="https://www.flaticon.com/svg/static/icons/svg/3209/3209265.svg" style={icon}/> Course Notes</Nav.Link>
+                        <Nav.Link href="/portfolio"> <img alt= "portfolio" src="https://www.flaticon.com/svg/static/icons/svg/941/941590.svg" style={icon}/> Portfolio</Nav.Link>
+                        <Nav.Link href="/ideabox"> <img alt= "idea" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176298.svg" style={icon}/> Idea Box</Nav.Link>
 
                     </Nav>
                 </Navbar>

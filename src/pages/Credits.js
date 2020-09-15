@@ -17,9 +17,6 @@ https://react-bootstrap.netlify.app/components/navbar/#navbar-api
 https://codeburst.io/how-to-create-a-navigation-bar-and-sidebar-using-react-348243ccd93
 https://i.pinimg.com/originals/a4/73/92/a473921763666c54801a795c738388ca.png
 Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
-Icons made by <a href="http://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
 https://stackoverflow.com/questions/41139643/react-native-how-to-change-text-value-dynamically
-https://reactjs.org/docs/animation.html
+https://hdtuto.com/article/react-js-get-current-date-and-time-example
 */
