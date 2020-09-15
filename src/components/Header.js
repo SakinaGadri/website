@@ -3,6 +3,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import React from 'react';
 import styled from 'styled-components';
+import resume from '../images/resume.png';
+import idea from '../images/idea.png';
+import notes from '../images/notes.png';
+import portfolio from '../images/portfolio.png';
 
 const Styles = styled.div`
   .navbar { background-color: #f9d8ce; display: flex; align-items: baseline }
@@ -14,6 +18,11 @@ const Styles = styled.div`
     
   }
 `;
+
+const icon = {
+    width: "30px",
+    padding: "5px"
+}
 
 export default class Header extends React.Component {
     render() {
@@ -28,10 +37,10 @@ export default class Header extends React.Component {
                         />
                     </Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link href="/resume">Resume</Nav.Link>
-                        <Nav.Link href="/notes">Course Notes</Nav.Link>
-                        <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-                        <Nav.Link href="/ideabox">Idea Box</Nav.Link>
+                        <Nav.Link href="/resume"> <img alt= "resume" src={resume} style={icon}/> Resume</Nav.Link>
+                        <Nav.Link href="/notes"> <img alt= "notes" src={notes} style={icon}/> Course Notes</Nav.Link>
+                        <Nav.Link href="/portfolio"> <img alt= "portfolio" src={portfolio} style={icon}/> Portfolio</Nav.Link>
+                        <Nav.Link href="/ideabox"> <img alt= "idea" src={idea} style={icon}/> Idea Box</Nav.Link>
 
                     </Nav>
                 </Navbar>
