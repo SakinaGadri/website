@@ -10,7 +10,7 @@ export default class Portfolio extends React.Component {
                 <Header/>
                 <div style={{display: 'flex', flex:1}}>
                     <Col>
-                    <h3>Portfolio</h3>
+                    <h3><img alt="clap" src="https://www.flaticon.com/svg/static/icons/svg/941/941590.svg" style={{ width: "40px", marginRight: "10px" }} />Portfolio</h3>
                     <p>Coming Soon!</p>
                     </Col>
                 </div>

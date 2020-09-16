@@ -10,7 +10,7 @@ export default class Notes extends React.Component {
                 <Header/>
                 <div style={{display: 'flex', flex:1}}>
                     <Col>
-                    <h3>Notes</h3>
+                    <h3><img alt="clap" src="https://www.flaticon.com/svg/static/icons/svg/3209/3209265.svg" style={{ width: "40px", marginRight: "10px" }} />Notes</h3>
                     <p>Coming Soon!</p>
                     </Col>
                 </div>

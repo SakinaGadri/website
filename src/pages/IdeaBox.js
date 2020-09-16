@@ -12,7 +12,7 @@ export default class IdeaBox extends React.Component {
                 <Header/>
                 <div style={{display: 'flex', flex:1}}>
                     <Col>
-                    <h3>Idea Box</h3>
+                    <h3><img alt="clap" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176298.svg" style={{ width: "40px", marginRight: "10px" }} />Idea Box</h3>
                     <p>Coming Soon!</p>
                     </Col>
                 </div>
