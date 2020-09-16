@@ -1,8 +1,19 @@
 import React from 'react';
 // import '../custom.css'
 
+/*
 const footer = {
-    position: 'absolute',
+    left: '0',
+    bottom: '0',
+    width: '100%',
+    backgroundColor: '#e2e2e2',
+    color: 'black',
+    textAlign: 'center',
+    padding: '5px',
+};
+*/
+const footer = {
+    // position: 'fixed',
     left: '0',
     bottom: '0',
     width: '100%',
@@ -35,7 +46,7 @@ export default class Footer extends React.Component {
                     <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/sakina-gadriwala">
                         <img alt="linkedin url" src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo-2003%E2%80%932011.png" style={{ width: '65px', paddingLeft: '5px' }} />
                     </a> |
-                    Credits: <a href="/credits"> Credits</a>
+                    <a href="/credits"> <img alt="clap" src="https://www.flaticon.com/svg/static/icons/svg/1616/1616567.svg" style={{width: "25px"}}/> Credits</a>
                 </div>
             </footer>
         )

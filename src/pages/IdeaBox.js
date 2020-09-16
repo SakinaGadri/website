@@ -1,11 +1,24 @@
 // https://theideaboxkids.com/whats-an-idea-box/
 
 import React from 'react';
+import { Col } from 'react-bootstrap';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
 
 export default class IdeaBox extends React.Component {
     render() {
         return (
-            <div> IdeaBox </div>
+            <div style={{display: 'flex', flexDirection: 'column', minHeight: '100vh'}}>
+                <Header/>
+                <div style={{display: 'flex', flex:1}}>
+                    <Col>
+                    <h3>Idea Box</h3>
+                    <p>Coming Soon!</p>
+                    </Col>
+                </div>
+                <Footer/>
+
+            </div>
         );
     }
 }

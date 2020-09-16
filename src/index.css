@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Baloo Tammudu 2', cursive;
+  font-family: 'Baloo Tammudu 2', 'Source Code Pro', monospace, cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

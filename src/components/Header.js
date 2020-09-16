@@ -10,8 +10,6 @@ const Styles = styled.div`
     color: #447e86;
     &:hover { color: #052226; }
     font-size: 110%;
-    font-family: 'Baloo Tammudu 2', cursive;
-    
   }
 `;
 
