@@ -12,22 +12,6 @@ const style = {
     minHeight: '100vh'
 };
 
-const footer = {
-    position: 'fixed',
-    left: '0',
-    bottom: '0',
-    width: '100%',
-    backgroundColor: '#e2e2e2',
-    color: 'black',
-    textAlign: 'center',
-    padding: '5px',
-};
-
-const text = {
-    flexDirection: 'column',
-    textAlign: 'center',
-};
-
 const name = {
     display: 'flex',
     padding: "15px",
@@ -50,37 +34,38 @@ const interest_style = {
     paddingLeft: "30px",
     marginLeft: "100px",
     marginRight: "100px",
-}
+};
 
 const interest_icon = {
     marginRight: "10px",
     width: "35px"
-}
+};
 
 const icon_div_style = {
     display: "flex",
+    flex: 1,
     marginLeft: "150px",
-}
+};
 
 const icon_style = {
     marginLeft: "10px",
     width: "50px"
-}
+};
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = { currentYear: new Date().getFullYear() };
     }
-    
+
     render() {
         return (
             <div className="App"
                 style={style} >
                 <Header />
                 <div style={name}>
-                    <Image src={me} style={{ width: "18%"}} thumbnail />
-                    <div style={{marginLeft: "10px"}}>
+                    <Image src={me} style={{ width: "18%" }} thumbnail />
+                    <div style={{ marginLeft: "10px" }}>
                         <h1> Hi, my name is Sakina! <img src={smile} style={smile_style} alt="smiley!" /> </h1>
                         <Roles />
                     </div>
@@ -127,19 +112,8 @@ export default class Home extends React.Component {
                         <img alt="resume" src="https://static.thenounproject.com/png/543772-200.png" style={icon_style} />
                     </a>
                 </div>
-                <footer style={footer}>
-                <div style={text}>
-                    © Sakina Gadriwala, {this.state.currentYear}
-                    <a rel="noopener noreferrer" target="_blank" href="https://github.com/SakinaGadri">
-                        <img src="https://clipart.info/images/ccovers/1499794873github-logo-png.png" style={{ width: '65px', paddingLeft: '5px' }} alt="github url" />
-                    </a> |
-                    <a rel="noopener noreferrer" target="_blank" href="https://linkedin.com/in/sakina-gadriwala">
-                        <img alt="linkedin url" src="https://logos-world.net/wp-content/uploads/2020/04/Linkedin-Logo-2003%E2%80%932011.png" style={{ width: '65px', paddingLeft: '5px' }} />
-                    </a> |
-                    <a href="/credits"> <img alt="clap" src="https://www.flaticon.com/svg/static/icons/svg/1616/1616567.svg" style={{width: "25px"}}/> Credits</a>
-                </div>
-            </footer>
-
-            </div>);
+                <Footer />
+            </div>
+        );
     }
 }
