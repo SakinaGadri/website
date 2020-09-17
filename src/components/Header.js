@@ -36,10 +36,9 @@ export default class Header extends React.Component {
                     </Navbar.Brand>
                     <Nav className="mr-auto">
                         <Nav.Link href="/resume"> <img alt= "resume" src="https://www.flaticon.com/svg/static/icons/svg/941/941565.svg" style={icon}/> Resume</Nav.Link>
+                        <Nav.Link href="/ideabox"> <img alt= "idea" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176298.svg" style={icon}/> Idea Box</Nav.Link>
                         <Nav.Link href="/notes"> <img alt= "notes" src="https://www.flaticon.com/svg/static/icons/svg/3209/3209265.svg" style={icon}/> Course Notes</Nav.Link>
                         <Nav.Link href="/portfolio"> <img alt= "portfolio" src="https://www.flaticon.com/svg/static/icons/svg/941/941590.svg" style={icon}/> Portfolio</Nav.Link>
-                        <Nav.Link href="/ideabox"> <img alt= "idea" src="https://www.flaticon.com/svg/static/icons/svg/3176/3176298.svg" style={icon}/> Idea Box</Nav.Link>
-
                     </Nav>
                 </Navbar>
             </Styles>
