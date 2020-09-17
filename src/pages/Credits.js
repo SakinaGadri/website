@@ -43,6 +43,7 @@ export default class Credits extends React.Component {
                                 <Col>
                                     <li> <a rel="noopener noreferrer" target="_blank" href="https://stackoverflow.com/">Stack Overflow</a> to help us with debugging.</li>
                                     <li> Many <a rel="noopener noreferrer" target="_blank" href="https://hackernoon.com">Hackernoon</a>, <a rel="noopener noreferrer" target="_blank" href="https://codeburst.io/">Codeburst</a> and <a rel="noopener noreferrer" target="_blank" href="http://medium.com/"> Medium </a> Articles.</li>
+                                    <li> <a rel="noopener noreferrer" target="_blank" href="https://netlify.com/">Netlify</a> and <a rel="noopener noreferrer" target="_blank" href="https://community.netlify.com/">Netlify Forum</a> for deployment</li>
                                 </Col>
                             </Row>
                         </ul>
