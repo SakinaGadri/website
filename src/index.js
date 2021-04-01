@@ -8,6 +8,7 @@ import CourseNotes from './pages/Notes';
 import Portfolio from './pages/Portfolio';
 import Credits from './pages/Credits';
 import IdeaBox from './pages/IdeaBox';
+import Demo from './pages/Demo';
 import './index.css';
 
 import * as serviceWorker from './serviceWorker';
@@ -26,6 +27,7 @@ const routing = (
                 <Route exact path="/portfolio" component={Portfolio} />
                 <Route exact path="/credits" component={Credits} />
                 <Route exact path="/ideabox" component={IdeaBox} />
+                <Route exact path="/demo" component={Demo} />
             </Switch>
         </div>
     </Router>
