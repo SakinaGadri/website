@@ -29,7 +29,6 @@ const smile_style = {
 const interest_style = {
     display: "flex",
     flexDirection: "column",
-    // minHeight: '100vh',
     fontSize: "130%",
     paddingLeft: "30px",
     marginLeft: "100px",

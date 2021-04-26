@@ -5,7 +5,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Resume from './pages/Resume';
 import CourseNotes from './pages/Notes';
-import Portfolio from './pages/Portfolio';
+import Gallery from './pages/Gallery';
 import Credits from './pages/Credits';
 import IdeaBox from './pages/IdeaBox';
 import './index.css';
@@ -23,7 +23,7 @@ const routing = (
                 <Route exact path="/" component={Home} />
                 <Route exact path="/resume" component={Resume} />
                 <Route exact path="/notes" component={CourseNotes} />
-                <Route exact path="/portfolio" component={Portfolio} />
+                <Route exact path="/gallery" component={Gallery} />
                 <Route exact path="/credits" component={Credits} />
                 <Route exact path="/ideabox" component={IdeaBox} />
             </Switch>
