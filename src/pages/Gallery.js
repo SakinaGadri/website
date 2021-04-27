@@ -57,49 +57,50 @@ const Icon = styled.img`
     margin-right: 10px;
 `;
 
-export default class Gallery extends React.Component {
-    render() {
-        return (
-            <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-                <Header />
-                <StyledDiv>
-                    <Col>
-                        <h3>
-                            <Icon src="https://www.flaticon.com/svg/static/icons/svg/941/941590.svg" />
+const Gallery = () => {
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <Header />
+            <StyledDiv>
+                <Col>
+                    <h3>
+                        <Icon src="https://www.flaticon.com/svg/static/icons/svg/941/941590.svg" />
                             Gallery
                         </h3>
-                        <Row>
-                            <Column>
-                                <Image src={leaves} />
-                                <Image src={autumnTrees} />
-                                <Image src={beach} />
-                                <Image src={pcarnival} />
-                                <Image src={park} />
-                            </Column>
-                            <Column>
-                                <Image src={shoes} />
-                                <Image src={esclator} />
-                                <Image src={finger} />
-                                <Image src={snail} />
-                                <Image src={symmtericalTrees} />
-                            </Column>
-                            <Column>
-                                <Image src={book} />
-                                <Image src={grass} />
-                                <Image src={omw} />
-                                <Image src={husnEyusuf} />
-                            </Column>
-                            <Column>
-                                <Image src={keyboard} />
-                                <Image src={lakeAndSun} />
-                                <Image src={mountains} />
-                                <Image src={oyster} />
-                            </Column>
-                        </Row>
-                    </Col>
-                </StyledDiv>
-                <Footer />
-            </div>
-        );
-    }
+                    <Row>
+                        <Column>
+                            <Image src={leaves} />
+                            <Image src={autumnTrees} />
+                            <Image src={beach} />
+                            <Image src={pcarnival} />
+                            <Image src={park} />
+                        </Column>
+                        <Column>
+                            <Image src={shoes} />
+                            <Image src={esclator} />
+                            <Image src={finger} />
+                            <Image src={snail} />
+                            <Image src={symmtericalTrees} />
+                        </Column>
+                        <Column>
+                            <Image src={book} />
+                            <Image src={grass} />
+                            <Image src={omw} />
+                            <Image src={husnEyusuf} />
+                        </Column>
+                        <Column>
+                            <Image src={keyboard} />
+                            <Image src={lakeAndSun} />
+                            <Image src={mountains} />
+                            <Image src={oyster} />
+                        </Column>
+                    </Row>
+                </Col>
+            </StyledDiv>
+            {/* <div style={{ padding: "5px" }}></div> */}
+            <Footer />
+        </div>
+    );
 }
+
+export default Gallery;

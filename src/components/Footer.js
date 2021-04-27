@@ -1,45 +1,34 @@
-import React from 'react';
-// import '../custom.css'
+import React, { useState } from 'react';
+import styled from 'styled-components';
 
-/*
-const footer = {
-    left: '0',
-    bottom: '0',
-    width: '100%',
-    backgroundColor: '#e2e2e2',
-    color: 'black',
-    textAlign: 'center',
-    padding: '5px',
-};
-*/
-const footer = {
-    left: '0',
-    bottom: '0',
-    width: '100%',
-    backgroundColor: '#e2e2e2',
-    color: 'black',
-    textAlign: 'center',
-    padding: '5px',
-    marginTop: '10px',
-};
+const FooterStyle = styled.footer`
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #e2e2e2;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    margin-top: auto;
+`;
 
-const text = {
-    flexDirection: 'column',
-    textAlign: 'center',
-};
+const Text = styled.div`
+    flex-direction: column;
+    text-align: center;
+`;
 
-export default class Footer extends React.Component {
+const Main = styled.div`
+    margin-top: auto;
+    padding-top: 10px;
+`;
 
-    constructor(props) {
-        super(props);
-        this.state = { currentYear: new Date().getFullYear() };
-    }
-
-    render() {
-        return (
-            <footer style={footer}>
-                <div style={text}>
-                    © Sakina Gadriwala, {this.state.currentYear}
+const Footer = () => {
+    const [currentYear] = useState(new Date());
+    return (
+        <Main>
+            <FooterStyle>
+                <Text>
+                    © Sakina Gadriwala, {currentYear.getFullYear()}
                     <a rel="noopener noreferrer" target="_blank" href="https://github.com/SakinaGadri">
                         <img src="https://clipart.info/images/ccovers/1499794873github-logo-png.png" style={{ width: '65px', paddingLeft: '5px' }} alt="github url" />
                     </a> |
@@ -47,8 +36,10 @@ export default class Footer extends React.Component {
                         <img alt="linkedin url" src="https://img.icons8.com/fluent/48/000000/linkedin.png" style={{ width: '35px', paddingLeft: '5px' }} />
                     </a> |
                     <a href="/credits"> <img alt="clap" src="https://www.flaticon.com/svg/static/icons/svg/1616/1616567.svg" style={{ width: "25px" }} /> Credits</a>
-                </div>
-            </footer>
-        )
-    }
+                </Text>
+            </FooterStyle>
+        </Main>
+    )
 }
+
+export default Footer;
