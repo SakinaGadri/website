@@ -3,19 +3,10 @@ import { storage } from '../firebase'
 import { ref, getDownloadURL } from "firebase/storage";
 import styled from 'styled-components';
 import { LinkedIn, AlternateEmail, GitHub } from '@mui/icons-material';
+import { device } from '../sizes';
 
 const Home = () => {
-	const [backgroundUrl, setBackgroundUrl] = useState('');
 	const [profileUrl, setProfileUrl] = useState('');
-
-	/* Get the background */
-	useEffect(() => {
-		getDownloadURL(ref(storage, 'background/summer.jpg'))
-			.then((url) => {
-				setBackgroundUrl(url);
-			})
-			.catch(err => console.error(err));
-	});
 
 	/* Get the profile image */
 	useEffect(() => {
@@ -30,7 +21,7 @@ const Home = () => {
 		// https://getcssscan.com/css-box-shadow-examples
 		// https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
 		// style={{ backgroundImage: `url(${backgroundUrl})`, height: '100%', overflow: 'hidden' }}
-		<div style={{ display: "flex", padding: "5%", fontFamily: "Karla, sans-serif" }}>
+		<OuterDiv id='outerdiv'>
 			<div id='profile' style={{ display: "flex", padding: "2% 5% 0% 0%" }}>
 				<img src={profileUrl}
 					style={{
@@ -43,14 +34,14 @@ const Home = () => {
 					}} />
 			</div>
 			<div>
-				<div id="intro" style={{ fontSize: "400%", letterSpacing: "3px", fontFamily: "Caveat Brush, cursive" }}>
+				<IntroDiv id="introdiv">
 					Hi I'm Sakina!
-				</div>
-				<div id="brief" style={{ fontSize: "200%", padding: "2% 2% 0% 0%" }}>
+				</IntroDiv>
+				<BriefDiv id="brief-div">
 					Graduated from University of Toronto, I enjoy creating... idk something
-				</div>
+				</BriefDiv>
 
-				<div id="links" style={{ display: "flex", flexDirection: "row", padding: "3% 2%", flex: "1" }}>
+				<LinksDiv id="links-div">
 					<div style={{ padding: "2%" }}>
 						<Link id="resume">Resume</Link>
 					</div>
@@ -60,24 +51,24 @@ const Home = () => {
 					<div style={{ padding: "2%" }}>
 						<Link id="gallery">Gallery</Link>
 					</div>
-				</div>
-				<div id="contact-info" style={{ fontSize: "120%", paddingRight: "2%" }}>
-					Contact me
+				</LinksDiv>
+				<ContactInfoDiv id="contact-info">
+					Contact me:
 					<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
-						<AlternateEmail />
-						sakina.gadriwala@gmail.com
+						<AlternateEmail style={{ paddingRight: "2%" }} />
+						<a href="mailto:sakina.gadriwala@gmail.com">Email Me</a>
 					</div>
 					<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
-						<LinkedIn />
-						www.linkedin.com/in/sakina-gadriwala
+						<LinkedIn style={{ paddingRight: "2%" }} />
+						<a href="https://linkedin.com/in/sakina-gadriwala">Follow me on LinkedIn</a>
 					</div>
 					<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
-						<GitHub />
-						https://github.com/SakinaGadri/
+						<GitHub style={{ paddingRight: "2%" }} />
+						<a href="https://github.com/SakinaGadri/">Explore my work on GitHub</a>
 					</div>
-				</div>
+				</ContactInfoDiv>
 			</div>
-		</div>
+		</OuterDiv>
 	)
 }
 
@@ -104,4 +95,70 @@ const Link = styled.button`
 		top: 5px;
 		left: 5px;
 	}
+
+	@media ${device.mobileS} {
+		padding: 0.25em 0.75em;
+	}
+	@media ${device.mobileM} {
+		padding: 0.25em 0.75em;
+	}
+	@media ${device.mobileL} {
+		padding: 0.25em 0.75em;
+	}
+	@media ${device.tablet} {
+		padding: 0.25em 0.75em;
+	}
 `;
+
+const OuterDiv = styled.div`
+	display: flex;
+	padding: 5%;
+	font-family: "Karla", sans-serif;
+	@media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
+		flex-direction: column;
+	}
+`;
+
+const IntroDiv = styled.div`
+	font-size: 400%;
+	letter-spacing: 3px;
+	font-family: "Caveat Brush", cursive;
+	@media ${device.mobileS}, ${device.mobileM} {
+		font-size: 250%;
+		text-align: center;
+	}
+`;
+
+const BriefDiv = styled.div`
+	font-size: 200%;
+	padding: 2% 2% 0% 0%;
+	@media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
+		font-size: 125%;
+		text-align: center;
+	}
+`;
+
+const LinksDiv = styled.div`
+	display: flex;
+	flex-direction: row;
+	padding: 3% 2%;
+	@media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
+		flex-direction: column;
+		align-items: center;
+		padding: 5% 3%;
+	}
+`;
+
+const ContactInfoDiv = styled.div`
+	font-size: 120%;
+	padding-right: 2%;
+	@media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
+		font-size: 105%;
+		align-items: center;
+	}
+`;
+
+// References for media queries:
+// https://css-tricks.com/logic-in-css-media-queries/
+// https://jsramblings.com/how-to-use-media-queries-with-styled-components/
+// https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/
