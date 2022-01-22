@@ -1,6 +1,4 @@
 import React from 'react';
-// import { storage } from '../firebase'
-// import { ref, getDownloadURL, getStream } from "firebase/storage";
 import styled from 'styled-components';
 import { Language, Code, TaskAlt, Sync } from '@mui/icons-material';
 import { device } from '../sizes';
@@ -14,21 +12,32 @@ const IdeaBox = () => {
   // https://theideaboxkids.com/whats-an-idea-box/
   // https://getcssscan.com/css-buttons-examples (button 52)
   return (
-    <div style={{ display: "flex", fontFamily: "Karla, sans-serif" }}>
+    <div id="idea-box" style={{ display: "flex", fontFamily: "Karla, sans-serif" }}>
       {/* Nav Menu */}
       <SideBar>
-        <ButtonDiv>
-          <Language /> <ATag href="#sign-lang">Sign Language</ATag>
-        </ButtonDiv>
-        <ButtonDiv>
-          <Code /> <ATag href="#morse-code">Morse Code</ATag>
-        </ButtonDiv>
-        <ButtonDiv>
-          <TaskAlt /> <ATag href="#stay-on-task">Stay on Task</ATag>
-        </ButtonDiv>
-        <ButtonDiv>
-          <ATag href="#sync-your-art"> <Sync /> Sync your Art</ATag>
-        </ButtonDiv>
+        <ATag href="#sign-lang">
+          <ButtonDiv>
+            <Language /> Sign Language
+          </ButtonDiv>
+        </ATag>
+
+        <ATag href="#morse-code">
+          <ButtonDiv>
+            <Code /> Morse Code
+          </ButtonDiv>
+        </ATag>
+        
+        <ATag href="#stay-on-task">
+          <ButtonDiv>
+            <TaskAlt /> Stay on Task
+          </ButtonDiv>
+        </ATag>
+
+        <ATag href="#sync-your-art">
+          <ButtonDiv>
+            <Sync /> Sync your Art
+          </ButtonDiv>
+        </ATag>
       </SideBar>
 
       {/* Starter Page */}
@@ -46,18 +55,13 @@ const IdeaBox = () => {
             </ScrollSentence>
           </p>
         </IdeaBoxBlobDiv>
-        <div id="sign-lang">
-          <SignLang />
-        </div>
-        <div id="morse-code">
-          <MorseCode />
-        </div>
-        <div id="stay-on-task">
-          <StayOnTask />
-        </div>
-        <div id="sync-your-art">
-          <SyncArt />
-        </div>
+
+        {/* Idea Pages */}
+        <SignLang />
+        <MorseCode />
+        <StayOnTask />
+        <SyncArt />
+
       </div>
     </div>
   )
@@ -82,7 +86,7 @@ const ButtonDiv = styled.button`
   touch-action: manipulation;
   :after {
     content: "";
-    background-color: #ffe54c;
+    background-color: #fb82a166;
     width: 100%;
     z-index: -1;
     position: absolute;
@@ -139,7 +143,7 @@ const ScrollSentence = styled.span`
 
 const IdeaBoxBlobDiv = styled.div`
   display: flex;
-  font-size: 150%;
+  font-size: 130%;
   padding-left: 1.5%;
   @media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
     font-size: 125%;

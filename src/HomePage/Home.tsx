@@ -4,9 +4,6 @@ import { ref, getDownloadURL } from "firebase/storage";
 import styled from 'styled-components';
 import { LinkedIn, AlternateEmail, GitHub } from '@mui/icons-material';
 import { device } from '../sizes';
-import IdeaBox from '../IdeaBoxPage';
-import Resume from '../ResumePage';
-import Gallery from '../GalleryPage';
 
 const Home = () => {
 	const [profileUrl, setProfileUrl] = useState('');
@@ -19,80 +16,63 @@ const Home = () => {
 			})
 			.catch(err => console.error(err));
 	});
-
+	// https://getcssscan.com/css-box-shadow-examples
+	// https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
 	return (
-		// https://getcssscan.com/css-box-shadow-examples
-		// https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
-		// style={{ backgroundImage: `url(${backgroundUrl})`, height: '100%', overflow: 'hidden' }}
-		<OuterDiv id='outerdiv'>
-			<HomePageDiv id="home-page-div">
-				<div id='profile' style={{ display: "flex", padding: "2% 5% 0% 0%" }}>
-					<img src={profileUrl}
-						style={{
-							width: "380px",
-							height: "400px",
-							objectFit: "cover",
-							objectPosition: "center",
-							boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px 5px",
-							borderRadius: "10%"
-						}} />
-				</div>
-				<div id="home-page-body">
-					<IntroDiv id="introdiv">
-						Hi I'm Sakina!
-					</IntroDiv>
-					<BriefDiv id="brief-div">
-						Graduated from University of Toronto, I enjoy creating... idk something
-					</BriefDiv>
-
-					<LinksDiv id="links-div">
-						<div style={{ padding: "2%" }}>
-							<LinkDiv id="resume">
-								<ATag href="#resume">Resume</ATag>
-							</LinkDiv>
-						</div>
-						<div style={{ padding: "2%" }}>
-							<LinkDiv id="idea-box">
-								<ATag href="#idea-box">Idea Box</ATag>
-							</LinkDiv>
-						</div>
-						<div style={{ padding: "2%" }}>
-							<LinkDiv id="gallery">
-								<ATag href="#gallery">Gallery</ATag>
-							</LinkDiv>
-						</div>
-					</LinksDiv>
-					<ContactInfoDiv id="contact-info">
-						Contact me:
-						<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
-							<AlternateEmail style={{ paddingRight: "2%" }} />
-							<a href="mailto:sakina.gadriwala@gmail.com">Email Me</a>
-						</div>
-						<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
-							<LinkedIn style={{ paddingRight: "2%" }} />
-							<a href="https://linkedin.com/in/sakina-gadriwala">Follow me on LinkedIn</a>
-						</div>
-						<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
-							<GitHub style={{ paddingRight: "2%" }} />
-							<a href="https://github.com/SakinaGadri/">Explore my work on GitHub</a>
-						</div>
-					</ContactInfoDiv>
-				</div>
-			</HomePageDiv>
-			<HRTag />
-			{/* <div id="resume" style={{ marginTop: "2%" }}>
-				<Resume />
-			</div> */}
-
-			<div id="idea-box">
-				<IdeaBox />
+		<HomePageDiv id="home-page">
+			<div id='profile' style={{ display: "flex", padding: "2% 5% 0% 0%" }}>
+				<img src={profileUrl} alt="Sakina G."
+					style={{
+						width: "380px",
+						height: "400px",
+						objectFit: "cover",
+						objectPosition: "center",
+						boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px 5px",
+						borderRadius: "10%"
+					}} />
 			</div>
-			<HRTag />
-			{/* <div id="gallery" style={{ marginTop: "2%" }}>
-				<Gallery />
-			</div> */}
-			<HRTag />
-		</OuterDiv>
+			<div id="home-page-body">
+				<IntroDiv id="introdiv">
+					Hi I'm Sakina!
+				</IntroDiv>
+				<BriefDiv id="brief-div">
+					Graduated from University of Toronto, I enjoy creating... idk something
+				</BriefDiv>
+
+				<LinksDiv id="links-div">
+					<div style={{ padding: "2%" }}>
+						<LinkDiv id="resume-link">
+							<ATag href="#resume">Resume</ATag>
+						</LinkDiv>
+					</div>
+					<div style={{ padding: "2%" }}>
+						<LinkDiv id="idea-box-link">
+							<ATag href="#idea-box">Idea Box</ATag>
+						</LinkDiv>
+					</div>
+					<div style={{ padding: "2%" }}>
+						<LinkDiv id="gallery-link">
+							<ATag href="#gallery">Gallery</ATag>
+						</LinkDiv>
+					</div>
+				</LinksDiv>
+				<ContactInfoDiv id="contact-info">
+					Contact me:
+					<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
+						<AlternateEmail style={{ paddingRight: "2%" }} />
+						<a href="mailto:sakina.gadriwala@gmail.com">Email Me</a>
+					</div>
+					<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
+						<LinkedIn style={{ paddingRight: "2%" }} />
+						<a href="https://linkedin.com/in/sakina-gadriwala">Follow me on LinkedIn</a>
+					</div>
+					<div style={{ display: "flex", padding: "1.5% 0% 0% 1.5%" }}>
+						<GitHub style={{ paddingRight: "2%" }} />
+						<a href="https://github.com/SakinaGadri/">Explore my work on GitHub</a>
+					</div>
+				</ContactInfoDiv>
+			</div>
+		</HomePageDiv>
 	)
 }
 
@@ -120,27 +100,8 @@ const LinkDiv = styled.button`
 		left: 5px;
 	}
 
-	@media ${device.mobileS} {
-		padding: 0.25em 0.75em;
-	}
-	@media ${device.mobileM} {
-		padding: 0.25em 0.75em;
-	}
-	@media ${device.mobileL} {
-		padding: 0.25em 0.75em;
-	}
-	@media ${device.tablet} {
-		padding: 0.25em 0.75em;
-	}
-`;
-
-const OuterDiv = styled.div`
-	display: flex;
-	padding: 5%;
-	font-family: "Karla", sans-serif;
-	flex-direction: column;
 	@media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
-		flex-direction: column;
+		padding: 0.25em 0.75em;
 	}
 `;
 
@@ -199,16 +160,6 @@ const ATag = styled.a`
     color: inherit;
   }
 `
-
-const HRTag = styled.hr`
-	border: 0;
-	clear: both;
-	display: block;
-	width: 96%;
-	background-color: #f5abab;
-	height: 2px;
-	margin: 3% 0%;
-`;
 
 // References for media queries:
 // https://css-tricks.com/logic-in-css-media-queries/

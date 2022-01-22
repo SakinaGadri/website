@@ -1,3 +1,5 @@
 import Home from './Home';
+import Footer from './Footer';
+import Header from './Header';
 
-export default Home;
+export { Home, Header, Footer };

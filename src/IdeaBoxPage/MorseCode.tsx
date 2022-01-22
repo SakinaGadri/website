@@ -2,7 +2,7 @@ import React from 'react';
 
 const MorseCode = () => {
     return (
-        <div style={{ display: "flex", flexDirection: "column", fontFamily: "Karla, sans-serif", padding: "1.5%" }}>
+        <div id="morse-code" style={{ display: "flex", flexDirection: "column", fontFamily: "Karla, sans-serif", padding: "1.5%" }}>
             <div style={{ fontSize: "170%", fontFamily: "Permanent Marker, cursive" }}>
                 Morse Code
             </div>

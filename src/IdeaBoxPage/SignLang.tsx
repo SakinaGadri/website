@@ -2,7 +2,7 @@ import React from 'react';
 
 const SignLang = () => {
     return (
-        <div style={{ display: "flex", flexDirection: "column", fontFamily: "Karla, sans-serif", padding: "1.5%" }}>
+        <div id="sign-lang" style={{ display: "flex", flexDirection: "column", fontFamily: "Karla, sans-serif", padding: "1.5%" }}>
             <div style={{ fontSize: "170%", fontFamily: "Permanent Marker, cursive" }}>
                 Sign Language
             </div>

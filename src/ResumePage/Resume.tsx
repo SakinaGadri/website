@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { storage } from '../firebase'
-import { ref, getDownloadURL, getStream } from "firebase/storage";
+import React from 'react';
 
 const Resume = () => {
-    const [backgroundUrl, setBackgroundUrl] = useState('');
-  
-    /* Get the background */
-    useEffect(() => {
-      getDownloadURL(ref(storage, 'background/fall.jpg'))
-      .then((url) => {
-        console.log(url);
-        setBackgroundUrl(url);
-      })
-      .catch(err => console.error(err));
-    });
 
-    return (
-        <img src={backgroundUrl} />
-    )
+  return (
+    <div id="resume">
+      Resume TODO
+    </div>
+  )
 }
 
 export default Resume;
