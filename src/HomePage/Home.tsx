@@ -25,7 +25,7 @@ const Home = () => {
 		// https://www.digitalocean.com/community/tutorials/css-cropping-images-object-fit
 		// style={{ backgroundImage: `url(${backgroundUrl})`, height: '100%', overflow: 'hidden' }}
 		<OuterDiv id='outerdiv'>
-			<div id="home-page" style={{display: "flex", flexDirection: "row"}}>
+			<HomePageDiv id="home-page-div">
 				<div id='profile' style={{ display: "flex", padding: "2% 5% 0% 0%" }}>
 					<img src={profileUrl}
 						style={{
@@ -37,7 +37,7 @@ const Home = () => {
 							borderRadius: "10%"
 						}} />
 				</div>
-				<div>
+				<div id="home-page-body">
 					<IntroDiv id="introdiv">
 						Hi I'm Sakina!
 					</IntroDiv>
@@ -78,21 +78,20 @@ const Home = () => {
 						</div>
 					</ContactInfoDiv>
 				</div>
-			</div>
-			<hr />
-			{/* <div id="resume">
+			</HomePageDiv>
+			<HRTag />
+			{/* <div id="resume" style={{ marginTop: "2%" }}>
 				<Resume />
-			</div>
-			<hr /> */}
+			</div> */}
 
 			<div id="idea-box">
 				<IdeaBox />
 			</div>
-			<hr />
-
-			{/* <div id="gallery">
+			<HRTag />
+			{/* <div id="gallery" style={{ marginTop: "2%" }}>
 				<Gallery />
 			</div> */}
+			<HRTag />
 		</OuterDiv>
 	)
 }
@@ -145,6 +144,14 @@ const OuterDiv = styled.div`
 	}
 `;
 
+const HomePageDiv = styled.div`
+	display: flex;
+	flex-direction: row;
+	@media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
+		flex-direction: column;
+	}
+`;
+
 const IntroDiv = styled.div`
 	font-size: 400%;
 	letter-spacing: 3px;
@@ -192,6 +199,16 @@ const ATag = styled.a`
     color: inherit;
   }
 `
+
+const HRTag = styled.hr`
+	border: 0;
+	clear: both;
+	display: block;
+	width: 96%;
+	background-color: #f5abab;
+	height: 2px;
+	margin: 3% 0%;
+`;
 
 // References for media queries:
 // https://css-tricks.com/logic-in-css-media-queries/

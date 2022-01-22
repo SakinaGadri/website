@@ -14,9 +14,9 @@ const IdeaBox = () => {
   // https://theideaboxkids.com/whats-an-idea-box/
   // https://getcssscan.com/css-buttons-examples (button 52)
   return (
-    <div style={{ display: "flex", fontFamily: "Karla, sans-serif", padding: "1.5%" }}>
+    <div style={{ display: "flex", fontFamily: "Karla, sans-serif" }}>
       {/* Nav Menu */}
-      <div style={{ display: "flex", flexDirection: "column", paddingTop: "5%", position: "sticky", top: "0px", color: "blue"}}>
+      <SideBar>
         <ButtonDiv>
           <Language /> <ATag href="#sign-lang">Sign Language</ATag>
         </ButtonDiv>
@@ -27,23 +27,25 @@ const IdeaBox = () => {
           <TaskAlt /> <ATag href="#stay-on-task">Stay on Task</ATag>
         </ButtonDiv>
         <ButtonDiv>
-          <Sync /> <ATag href="#sync-your-art">Sync your Art</ATag>
+          <ATag href="#sync-your-art"> <Sync /> Sync your Art</ATag>
         </ButtonDiv>
-      </div>
-    
+      </SideBar>
+
       {/* Starter Page */}
       <div>
         <TitleDiv> My Idea Box </TitleDiv>
-        <div style={{ display: "flex", fontSize: "150%", paddingLeft: "1.5%" }}>
+        <IdeaBoxBlobDiv>
           <p style={{ margin: "1% 0%" }}>
             An idea that was inspired by <a rel="noopener noreferrer" href="https://theideaboxkids.com/whats-an-idea-box/">The Idea Box</a>.
             My Idea Box contains all the project ideas
             I've thought of doing, but haven't done yet. My goal is to complete at least 2 of them
             a year, and add as many as I can think of every year.
             <br /> <br />
-            Keep scrolling or use the navigation bar on the left to read more about these ideas!
+            <ScrollSentence>
+              Keep scrolling or use the navigation bar on the left to read more about these ideas!
+            </ScrollSentence>
           </p>
-        </div>
+        </IdeaBoxBlobDiv>
         <div id="sign-lang">
           <SignLang />
         </div>
@@ -103,7 +105,8 @@ const TitleDiv = styled.div`
   font-family: "Homemade Apple", cursive;
   font-size: 285%;
   @media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
-    font-size: 100%;
+    font-size: 200%;
+    text-align: center;
   }
 `;
 
@@ -115,3 +118,31 @@ const ATag = styled.a`
     color: inherit;
   }
 `
+
+const SideBar = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 5%;
+  position: sticky;
+  top: 0px;
+  height: 100%;
+  @media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
+    display: none;
+  }
+`;
+
+const ScrollSentence = styled.span`
+  @media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
+    display: none;
+  }
+`
+
+const IdeaBoxBlobDiv = styled.div`
+  display: flex;
+  font-size: 150%;
+  padding-left: 1.5%;
+  @media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
+    font-size: 125%;
+    text-align: center;
+  }
+`;
