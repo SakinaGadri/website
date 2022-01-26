@@ -23,7 +23,7 @@ const Header = () => {
                     <ButtonStyle>Gallery</ButtonStyle>
                 </a>
             </NavBarStyle>
-            <img src={logo} style={{margin: "1%"}} />
+            <img src={logo} style={{margin: "1%"}} alt='logo' />
         </OuterDivStyle>
     )
 }
