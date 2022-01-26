@@ -42,17 +42,17 @@ const Home = () => {
 				<LinksDiv id="links-div">
 					<div style={{ padding: "2%" }}>
 						<LinkDiv id="resume-link">
-							<ATag href="#resume">Resume</ATag>
+							<ATag href="/resume">Resume</ATag>
 						</LinkDiv>
 					</div>
 					<div style={{ padding: "2%" }}>
 						<LinkDiv id="idea-box-link">
-							<ATag href="#idea-box">Idea Box</ATag>
+							<ATag href="/ideabox">Idea Box</ATag>
 						</LinkDiv>
 					</div>
 					<div style={{ padding: "2%" }}>
 						<LinkDiv id="gallery-link">
-							<ATag href="#gallery">Gallery</ATag>
+							<ATag href="/gallery">Gallery</ATag>
 						</LinkDiv>
 					</div>
 				</LinksDiv>

@@ -8,10 +8,10 @@ const Footer = () => {
     return (
         <FooterStyle>
             <ul id="list-inline">
-                <li id="list-inline-item"><a href="#home-page">Home</a></li>
-                <li id="list-inline-item"><a href="#resume">Resume</a></li>
-                <li id="list-inline-item"><a href="#idea-box">Idea Box</a></li>
-                <li id="list-inline-item"><a href="#gallery">Gallery</a></li>
+                <li id="list-inline-item"><a href="/">Home</a></li>
+                <li id="list-inline-item"><a href="/resume">Resume</a></li>
+                <li id="list-inline-item"><a href="/ideabox">Idea Box</a></li>
+                <li id="list-inline-item"><a href="/gallery">Gallery</a></li>
             </ul>
             <p id="copyright">
                 Sakina Gadriwala © {new Date().getFullYear()}
@@ -26,6 +26,7 @@ const FooterStyle = styled.footer`
     align-self: center;
     color: #c90d52;
     font-weight: 900;
+    margin-bottom: 2%;
     ul {
         display: flex;
         padding: 0;

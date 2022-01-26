@@ -27,7 +27,7 @@ const Header = () => {
 export default Header;
 
 const ButtonStyle = styled.button`
-    background-color: #ed668824;
+    background-color: white;
     border: 0 solid #e2e8f0;
     box-sizing: border-box;
     color: #0d172a;
