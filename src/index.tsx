@@ -8,7 +8,6 @@ import {
 } from "react-router-dom";
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-// import { Home } from './HomePage';
 import IdeaBox from './IdeaBoxPage';
 import Gallery from './GalleryPage';
 import Resume from './ResumePage';

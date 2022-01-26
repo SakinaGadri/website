@@ -6,21 +6,34 @@ import { device } from '../sizes';
 
 const Footer = () => {
     return (
-        <FooterStyle>
-            <ul id="list-inline">
-                <li id="list-inline-item"><a href="/">Home</a></li>
-                <li id="list-inline-item"><a href="/resume">Resume</a></li>
-                <li id="list-inline-item"><a href="/ideabox">Idea Box</a></li>
-                <li id="list-inline-item"><a href="/gallery">Gallery</a></li>
-            </ul>
-            <p id="copyright">
-                Sakina Gadriwala © {new Date().getFullYear()}
-            </p>
-        </FooterStyle>
+        <>
+            <HRTag />
+            <FooterStyle>
+                <ul id="list-inline">
+                    <li id="list-inline-item"><a href="/">Home</a></li>
+                    <li id="list-inline-item"><a href="/resume">Resume</a></li>
+                    <li id="list-inline-item"><a href="/ideabox">Idea Box</a></li>
+                    <li id="list-inline-item"><a href="/gallery">Gallery</a></li>
+                </ul>
+                <p id="copyright">
+                    Sakina Gadriwala © {new Date().getFullYear()}
+                </p>
+            </FooterStyle>
+        </>
     );
 }
 
 export default Footer;
+
+const HRTag = styled.hr`
+	border: 0;
+	clear: both;
+	display: block;
+	width: 96%;
+	background-color: #f5abab;
+	height: 2px;
+	margin-top: 3.5%;
+`;
 
 const FooterStyle = styled.footer`
     align-self: center;
