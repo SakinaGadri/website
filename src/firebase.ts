@@ -1,15 +1,16 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp} from 'firebase/app';
+import { initializeApp } from 'firebase/app';
 import { getStorage } from "firebase/storage";
 
+// for env file: https://medium.com/how-to-react/using-env-file-in-react-js-b2714235e77e
 const firebaseConfig = {
-  apiKey: "AIzaSyBRJmVA47IV__xTWyi2qBHVTNeRJ6nUCsw",
-  authDomain: "sakinagadri-web.firebaseapp.com",
-  projectId: "sakinagadri-web",
-  storageBucket: "sakinagadri-web.appspot.com",
-  messagingSenderId: "590771353449",
-  appId: "1:590771353449:web:9863cfdbf4d003d11e6ff8",
-  measurementId: "G-LEVEZ7JFTD"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
