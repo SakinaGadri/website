@@ -36,24 +36,32 @@ const Home = () => {
 					Hi I'm Sakina!
 				</IntroDiv>
 				<BriefDiv id="brief-div">
-					Graduated from University of Toronto, I enjoy creating... idk something
+					I am a full-stack developer and a photographer who loves to explore the outdoors.
+					<br />
+					My main areas of expertise include Javascript, Typescript, Node.js, HTML, CSS, Java and Python.
 				</BriefDiv>
 
 				<LinksDiv id="links-div">
 					<div style={{ padding: "2%" }}>
-						<LinkDiv id="resume-link">
-							<ATag href="/resume">Resume</ATag>
-						</LinkDiv>
+						<ATag href="/resume">
+							<LinkDiv id="resume-link">
+								Resume
+							</LinkDiv>
+						</ATag>
 					</div>
 					<div style={{ padding: "2%" }}>
-						<LinkDiv id="idea-box-link">
-							<ATag href="/ideabox">Idea Box</ATag>
-						</LinkDiv>
+						<ATag href="/ideabox">
+							<LinkDiv id="idea-box-link">
+								Idea Box
+							</LinkDiv>
+						</ATag>
 					</div>
 					<div style={{ padding: "2%" }}>
-						<LinkDiv id="gallery-link">
-							<ATag href="/gallery">Gallery</ATag>
-						</LinkDiv>
+						<ATag href="/gallery">
+							<LinkDiv id="gallery-link">
+								Gallery
+							</LinkDiv>
+						</ATag>
 					</div>
 				</LinksDiv>
 				<ContactInfoDiv id="contact-info">
@@ -124,7 +132,7 @@ const IntroDiv = styled.div`
 `;
 
 const BriefDiv = styled.div`
-	font-size: 200%;
+	font-size: 135%;
 	padding: 2% 2% 0% 0%;
 	@media ${device.mobileS}, ${device.mobileM}, ${device.mobileL} {
 		font-size: 125%;
